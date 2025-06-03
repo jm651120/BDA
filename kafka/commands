@@ -1,0 +1,14 @@
+Command uses
+docker compose up -d
+
+Move into Kafka container
+docker exec -it kafka /bin/sh
+
+Go inside kafka installation folder
+cd /opt/kafka_2.13-2.8.1/bin
+
+Create Kafka topic
+kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic stream
+
+Run producer.py to simulate streaming
+
